@@ -12,6 +12,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	</head>
 	<body>
 		<div class="nav-container">
@@ -32,12 +35,16 @@
 			</div>
 		</div>
 		<div class="typing">
-			<div><p>This is where quotes will display</p></div>
+			<div class="timer" id="timer">7</div>
 			<container>
-				<p>This is where the user will type</p>
+				<div class="quote-display" id="quoteDisplay">This is where the quote will appear</div>
+				<textarea class="quote-input" id="quoteInput" autofocus>This is where users will type</textarea>
 			</container>
 		</div>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+		<article class="ending">
+			<p>Copyright</p>
+			<p>Please ensure that you have cookie enable for best experience.</p>
+			<p>Do not sell my data</p>
+		</article>
 	</body>
 </html>

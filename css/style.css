@@ -1,6 +1,4 @@
-/******************************************
-/* CSS
-/*******************************************/
+/* CSS ***********************************************************************/
 
 * {
   box-sizing: border-box;
@@ -9,13 +7,13 @@
 
   background: rgb(59, 81, 82);
 
-  font-family: 'Fredoka One', 'sans-serif';
+  font-family: 'Raleway', 'sans-serif';
 }
 
 /* Navigation Menu Section  **************************************************/
 
 .nav-container {
-  border: 1px solid black;
+  border: 1px solid yellow;
   top: 0;
   left: 0;
   height: 100%;
@@ -62,16 +60,52 @@
 
 /* Typing Section ************************************************************/
 
+.timer {
+  text-align: center;
+}
+ 
 .typing {
   border: 1px solid green;
   height: 100%;
   width: 100%;
+
+  padding: 5rem;
+
+  color: white;
+  font-size: 1rem;
 }
 
-.typing container p {
-  border: 1px solid blue;
-  height: 20rem;
-  width: 70%;
+container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  margin-left: 12rem
+.quote-display {
+  margin: 2rem;
+}
+
+/* .quote-input:focus {
+  border-color: gray;
+} */
+
+textarea {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+
+  height: 15rem;
+  width: 70%;
+  outline: none;
+
+  padding: 2rem;
+  
+}
+
+/* Ending  ********************************************************************/
+
+.ending {
+  border: 1px solid red;
+  color: white;
 }
