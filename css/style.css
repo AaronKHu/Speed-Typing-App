@@ -5,6 +5,52 @@
 * {
   box-sizing: border-box;
   list-style-type: none;
+  text-decoration: none;
+
+  background: rgb(86, 123, 125);
+
+  font-family: 'Fredoka One', 'sans-serif';
 }
 
+.nav-container {
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-menu ul li a {
+  color: white;
+  font-size: 20px;
+
+  padding: 2rem;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.user > * {
+  padding: 0.5rem;
+}
+
+.profile,
+.notification,
+.setting {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}

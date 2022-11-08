@@ -7,6 +7,9 @@
 
 		<title>Title in the tab</title>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -14,7 +17,7 @@
 		<div class="nav-container">
 			<div class="nav-menu">
 				<img />
-				<ul>
+				<ul class="nav-list">
 					<li><a href='#'>About</a></li>
 					<li><a href='#'>Leaderboards</a></li>
 					<li><a href='#'>Support</a></li>
@@ -22,7 +25,9 @@
 					<li><a href='#'>Privacy</a></li>
 				</ul>
 				<div class="user">
-					
+					<iconify-icon class="profile" icon="ooui:user-avatar"></iconify-icon>
+					<iconify-icon class="notification" icon="clarity:bell-solid"></iconify-icon>
+					<iconify-icon class="setting" icon="ci:settings-filled"></iconify-icon>
 				</div>
 			</div>
 		</div>
@@ -32,5 +37,6 @@
 			</container>
 		</div>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	</body>
 </html>
