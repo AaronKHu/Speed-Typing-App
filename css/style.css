@@ -7,10 +7,12 @@
   list-style-type: none;
   text-decoration: none;
 
-  background: rgb(86, 123, 125);
+  background: rgb(59, 81, 82);
 
   font-family: 'Fredoka One', 'sans-serif';
 }
+
+/* Navigation Menu Section  **************************************************/
 
 .nav-container {
   border: 1px solid black;
@@ -31,11 +33,14 @@
 }
 
 .nav-menu ul li a {
-  color: white;
-  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  letter-spacing: 1px;
 
   padding: 2rem;
 }
+
+/* User Section ***************************************************************/
 
 .user {
   display: flex;
@@ -53,4 +58,20 @@
   font-size: 20px;
   cursor: pointer;
   color: white;
+}
+
+/* Typing Section ************************************************************/
+
+.typing {
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+}
+
+.typing container p {
+  border: 1px solid blue;
+  height: 20rem;
+  width: 70%;
+
+  margin-left: 12rem
 }
