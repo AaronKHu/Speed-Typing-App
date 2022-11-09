@@ -3,7 +3,21 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 
 quoteInputElement.addEventListener('input', () => {
-    console.log('changed')
+    const arrayQuote = quoteDisplayElement.querySelectorAll('span')
+    const arrayInput = quoteInputElement.value.split('')
+    arrayQuote.forEach((characterSpan, index) => {
+        const character = arrayInput[index]
+        if (character == null) {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.remove('incorrect')
+        } else if (character === characterSpan.innerText) {
+            characterSpan.classList.add('correct')
+            characterSpan.classList.remove('incorrect')
+        } else {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.add('incorrect')
+        }
+    })
 })
 
 function getRandomQuote() {

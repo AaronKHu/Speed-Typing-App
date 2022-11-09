@@ -110,3 +110,12 @@ textarea {
   border: 1px solid red;
   color: white;
 }
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
