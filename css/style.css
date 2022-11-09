@@ -5,7 +5,7 @@
   list-style-type: none;
   text-decoration: none;
 
-  background: rgb(59, 81, 82);
+  background: rgb(20, 30, 30);
 
   font-family: 'Raleway', 'sans-serif';
 }
@@ -41,6 +41,9 @@
   font-size: 15px;
   letter-spacing: 1px;
 
+  font-weight: bold;
+  opacity: 70%;
+
   padding: 2rem;
 }
 
@@ -62,6 +65,13 @@
   font-size: 20px;
   cursor: pointer;
   color: white;
+  opacity: 70%;
+}
+
+.profile:hover,
+.notification:hover,
+.setting:hover {
+  opacity: 100%;
 }
 
 /* Modes Section ****************************************************************/
@@ -72,10 +82,11 @@
 
 .modes li {
   color: white;
+  font-weight: bold;
+  opacity: 70%;
   padding: 1rem;
   max-width: 100px;
-
-  border: 1px solid black;
+  cursor: pointer;
 }
 
 /* Typing Section ************************************************************/
@@ -87,6 +98,9 @@
   top: -2rem;
   right: -12rem;
   width: 70%;
+
+  font-weight: bold;
+  color: yellow;
 }
  
 .typing {
@@ -110,11 +124,17 @@ container {
   margin: 2rem 0rem;
   width: 65%;
   z-index: 10;
+
+  opacity: 70%;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
 }
 
 .quote-input {
   position: relative;
-  top: -5rem;
+  top: -7rem;
 
   color: transparent;
 }
@@ -124,13 +144,14 @@ container {
 } */
 
 textarea {
-  border: 1px solid white;
-  border-radius: 0.5rem;
+  /* border: 1px solid white;
+  border-radius: 0.5rem; */
   color: white;
 
   height: 15rem;
   width: 70%;
   outline: none;
+  border: none;
   resize: none;
 
   padding: 2rem;
@@ -145,9 +166,11 @@ textarea {
 
 .correct {
   color: green;
+  opacity: 100%;
 }
 
 .incorrect {
   color: red;
   text-decoration: underline;
+  opacity: 100%;
 }
