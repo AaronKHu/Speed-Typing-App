@@ -10,10 +10,15 @@
   font-family: 'Raleway', 'sans-serif';
 }
 
+.logo {
+  height: 90px;
+  width: auto;
+  cursor: pointer;
+}
+
 /* Navigation Menu Section  **************************************************/
 
 .nav-container {
-  border: 1px solid yellow;
   top: 0;
   left: 0;
   height: 100%;
@@ -28,6 +33,7 @@
 .nav-menu ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .nav-menu ul li a {
@@ -58,14 +64,32 @@
   color: white;
 }
 
+/* Modes Section ****************************************************************/
+
+.modes {
+  position: absolute;
+}
+
+.modes li {
+  color: white;
+  padding: 1rem;
+  max-width: 100px;
+
+  border: 1px solid black;
+}
+
 /* Typing Section ************************************************************/
 
 .timer {
   text-align: center;
+  font-size: 2rem;
+  position: relative;
+  top: -2rem;
+  right: -12rem;
+  width: 70%;
 }
  
 .typing {
-  border: 1px solid green;
   height: 100%;
   width: 100%;
 
@@ -84,6 +108,15 @@ container {
 
 .quote-display {
   margin: 2rem 0rem;
+  width: 65%;
+  z-index: 10;
+}
+
+.quote-input {
+  position: relative;
+  top: -5rem;
+
+  color: transparent;
 }
 
 /* .quote-input:focus {
@@ -107,7 +140,6 @@ textarea {
 /* Ending  ********************************************************************/
 
 .ending {
-  border: 1px solid red;
   color: white;
 }
 

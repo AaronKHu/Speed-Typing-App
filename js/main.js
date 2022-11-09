@@ -58,4 +58,10 @@ function getTimerTime() {
     return Math.floor((new Date() - startTime) / 1000)
 }
 
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab') {
+        renderNewQuote()
+    }
+})
+
 renderNewQuote();
