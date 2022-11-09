@@ -98,6 +98,7 @@ textarea {
   height: 15rem;
   width: 70%;
   outline: none;
+  resize: none;
 
   padding: 2rem;
   
