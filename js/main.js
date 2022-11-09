@@ -2,6 +2,7 @@ const random_quote_API = 'https://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 
+let correct = true
 quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayElement.querySelectorAll('span')
     const arrayInput = quoteInputElement.value.split('')
@@ -10,14 +11,19 @@ quoteInputElement.addEventListener('input', () => {
         if (character == null) {
             characterSpan.classList.remove('correct')
             characterSpan.classList.remove('incorrect')
+            correct = false
         } else if (character === characterSpan.innerText) {
             characterSpan.classList.add('correct')
             characterSpan.classList.remove('incorrect')
+            correct = true
         } else {
             characterSpan.classList.remove('correct')
             characterSpan.classList.add('incorrect')
+            correct = false
         }
     })
+
+    if (correct) renderNewQuote()
 })
 
 function getRandomQuote() {
