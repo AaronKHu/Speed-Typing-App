@@ -5,21 +5,38 @@ const timerElement = document.getElementById('timer');
 
 let correct = true
 quoteInputElement.addEventListener('input', () => {
-    const arrayQuote = quoteDisplayElement.querySelectorAll('span')
+    const arrayDisplay = quoteDisplayElement.querySelectorAll('span')
     const arrayInput = quoteInputElement.value.split('')
-    arrayQuote.forEach((characterSpan, index) => {
+    arrayDisplay.forEach((characterSpan, index) => {
         const character = arrayInput[index]
         if (character == null) {
-            characterSpan.classList.remove('correct')
-            characterSpan.classList.remove('incorrect')
+            characterSpan.classList.remove('correct-display')
+            characterSpan.classList.remove('incorrect-display')
             correct = false
         } else if (character === characterSpan.innerText) {
-            characterSpan.classList.add('correct')
-            characterSpan.classList.remove('incorrect')
+            characterSpan.classList.add('correct-display')
+            characterSpan.classList.remove('incorrect-display')
             correct = true
         } else {
-            characterSpan.classList.remove('correct')
-            characterSpan.classList.add('incorrect')
+            characterSpan.classList.remove('correct-display')
+            characterSpan.classList.add('incorrect-display')
+            correct = false
+        }
+    })
+
+    if (correct) renderNewQuote()
+})
+
+quoteDisplayElement.addEventListener('input', () => {
+
+    arrayInput.forEach((character, index) => {
+        if (character === characterSpan.innerText) {
+            characterSpanInput.classList.add('correct-input')
+            characterSpanInput.classList.remove('incorrect-input')
+            correct = true 
+        } else {
+            characterSpanInput.classList.remove('correct-input')
+            characterSpanInput.classList.add('incorrect-input')
             correct = false
         }
     })
@@ -41,11 +58,16 @@ async function renderNewQuote() {
         characterSpan.innerText = character
         quoteDisplayElement.appendChild(characterSpan)
     })
+    quote.split('').forEach(character => {
+        const characterSpanInput = document.createElement('span')
+        characterSpanInput.innerText = character
+        quoteInputElement.appendChild(characterSpan)
+     })
     quoteInputElement.value = null
     startTimer()
-}
+} 
 
-let startTime 
+let startTime
 function startTimer() {
     timerElement.innerText = 0
     startTime = new Date()

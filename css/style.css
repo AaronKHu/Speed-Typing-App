@@ -14,6 +14,13 @@
   height: 90px;
   width: auto;
   cursor: pointer;
+  opacity: 70%;
+
+  margin-top: 1rem;
+}
+
+.logo:hover {
+  opacity: 100%;
 }
 
 /* Navigation Menu Section  **************************************************/
@@ -45,6 +52,10 @@
   opacity: 70%;
 
   padding: 2rem;
+}
+
+.nav-menu ul li a:hover {
+  opacity: 100%;
 }
 
 /* User Section ***************************************************************/
@@ -89,6 +100,10 @@
   cursor: pointer;
 }
 
+.modes li:hover {
+  opacity: 100%;
+}
+
 /* Typing Section ************************************************************/
 
 .timer {
@@ -122,40 +137,44 @@ container {
 
 .quote-display {
   margin: 2rem 0rem;
-  width: 65%;
+  height: 30%;
+  width: 70%;
+  position: absolute;
+  top: 13.5rem; 
   z-index: 10;
 
   opacity: 70%;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  letter-spacing: 2px;
-
+  letter-spacing: 2px;  
+  line-height: 3rem;
 }
-
-.quote-input {
-  position: relative;
-  top: -7rem;
-
-  color: transparent;
-}
-
-/* .quote-input:focus {
-  border-color: gray;
-} */
 
 textarea {
-  /* border: 1px solid white;
-  border-radius: 0.5rem; */
-  color: white;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: green;
+  background: transparent;
 
-  height: 15rem;
+  margin: 2rem 0rem;
   width: 70%;
+  height: 30%;
+  position: absolute;
+  top: 13.3rem;
+  z-index: 100;
+
+  opacity: 70%;
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;  
+  line-height: 3rem;
+
   outline: none;
   border: none;
   resize: none;
 
-  padding: 2rem;
-  
+  /* padding: 2rem; */
 }
 
 /* Ending  ********************************************************************/
@@ -164,13 +183,18 @@ textarea {
   color: white;
 }
 
-.correct {
+.correct-display {
   color: green;
-  opacity: 100%;
 }
 
-.incorrect {
+.incorrect-display {
   color: red;
-  text-decoration: underline;
-  opacity: 100%;
+}
+
+.correct-input {
+  color: transparent;
+}
+
+.incorrect-input {
+  color: transparent;
 }
