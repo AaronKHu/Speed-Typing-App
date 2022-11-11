@@ -110,7 +110,7 @@
   text-align: center;
   font-size: 2rem;
   position: relative;
-  top: -2rem;
+  top: 5rem;
   right: -12rem;
   width: 70%;
 
@@ -140,7 +140,7 @@ container {
   height: 30%;
   width: 70%;
   position: absolute;
-  top: 13.5rem; 
+  top: 20rem; 
   z-index: 10;
 
   opacity: 70%;
@@ -151,17 +151,16 @@ container {
 }
 
 textarea {
-  border: 1px solid white;
-  border-radius: 0.5rem;
-  color: green;
-  background: transparent;
+  /* border: 1px solid white;
+  border-radius: 0.5rem; */
+  color: white;
 
   margin: 2rem 0rem;
   width: 70%;
   height: 30%;
   position: absolute;
-  top: 13.3rem;
-  z-index: 100;
+  top: 20rem;
+  z-index: 9;
 
   opacity: 70%;
   font-family: 'Raleway', 'sans-serif';
@@ -183,18 +182,29 @@ textarea {
   color: white;
 }
 
-.correct-display {
+.correct {
   color: green;
+  cursor: text;
 }
 
-.incorrect-display {
+.incorrect {
   color: red;
+  cursor: text;
 }
 
-.correct-input {
+/* .correct-input {
   color: transparent;
 }
 
 .incorrect-input {
   color: transparent;
+} */
+
+.results-WPM {
+  border: 1px solid white;
+  position: absolute;
+  top: 30rem;
+
+  color: white;
+  margin: 2rem;
 }
