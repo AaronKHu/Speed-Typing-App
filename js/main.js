@@ -48,7 +48,7 @@ async function renderNewQuote() {
 
 function characterPerMin() {
     const countCorrectClasses = document.querySelectorAll('.correct').length;
-    const correctClassesOverMin = (countCorrectClasses/60)
+    const correctClassesOverMin = (countCorrectClasses/60000)
     resultsWpmElement.innerText = correctClassesOverMin
 }
 
@@ -98,3 +98,27 @@ renderNewQuote();
 
 //     if (correct) renderNewQuote()
 // })
+
+//COUNTDOWN TIMER ////////////////////////////////////////////////////////
+
+const startingMinute = 0.5;
+let time = startingMinute * 60;
+let refreshIntervalid = setInterval(updateCountdown, 1000);//updates every 1 second
+
+const countdownElement = document.getElementById("countdown");
+
+refreshIntervalid;
+
+function updateCountdown() {
+    const minutes = Math.floor(time/60);//rounds a number down to nearest integer
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    
+    countdownElement.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+
+    if (time < 0) {
+        clearInterval(refreshIntervalid);//stops the setInterval when time = 0:00 to avoid negative time
+    }
+}
