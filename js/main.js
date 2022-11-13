@@ -1,8 +1,9 @@
+/* Quote Display and Input Section ***********************************************/
+
 const random_quote_API = 'https://api.quotable.io/random';
 const quoteDisplayElement = document.getElementById('quoteDisplay');
 const quoteInputElement = document.getElementById('quoteInput');
 const timerElement = document.getElementById('timer');
-const resultsWpmElement = document.getElementById('resultsWpm')
 
 let correct = true
 quoteInputElement.addEventListener('input', () => {
@@ -46,11 +47,7 @@ async function renderNewQuote() {
     startTimer()
 } 
 
-function characterPerMin() {
-    const countCorrectClasses = document.querySelectorAll('.correct').length;
-    const correctClassesOverMin = (countCorrectClasses/60000)
-    resultsWpmElement.innerText = correctClassesOverMin
-}
+/* Timer For Until Quote Ends ******************************************/
 
 let startTime
 function startTimer() {
@@ -65,14 +62,60 @@ function getTimerTime() {
     return Math.floor((new Date() - startTime) / 1000)
 }
 
+renderNewQuote();
+
+/* Keybinds For Users ********************************************/
+
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') {
         renderNewQuote()
     }
 })
 
-renderNewQuote();
+/* 30 Seconds Countdown Timer ************************************/
 
+const countdownElement = document.getElementById("countdown");
+const startingMinute = 0.5;
+let time = startingMinute * 60;
+let refreshIntervalid = setInterval(updateCountdown, 1000);//updates every 1 second
+
+refreshIntervalid;
+
+function updateCountdown() {
+    const minutes = Math.floor(time/60);//rounds a number down to nearest integer
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    
+    countdownElement.innerHTML = `${seconds}`;
+    time--;
+
+    if (time < 0) {
+        clearInterval(refreshIntervalid);//stops the setInterval when time = 0 to avoid negative time
+    }
+}
+
+/* Counting # of Words ************************************************/
+
+// function countCorrectWords {
+
+
+/* Counting Correct # of Character Classes ******************************/
+
+const resultsWpmElement = document.getElementById('resultsWpm');
+
+function characterPerMin() {
+    if renderNewQuote(() => {
+        const countCorrectClasses = document.querySelectorAll('.correct').length;//counts the total number of correct classes 
+        const correctClassesOverMin = (countCorrectClasses / time)
+        resultsWpmElement.innerHTML = `${correctClassesOverMin}`
+    })
+}
+
+
+
+
+/* Misc. Testing ****************************************************/
 
 // quote.split('').forEach(character => {
 //     const characterSpanInput = document.createElement('span')
@@ -98,27 +141,3 @@ renderNewQuote();
 
 //     if (correct) renderNewQuote()
 // })
-
-//COUNTDOWN TIMER ////////////////////////////////////////////////////////
-
-const startingMinute = 0.5;
-let time = startingMinute * 60;
-let refreshIntervalid = setInterval(updateCountdown, 1000);//updates every 1 second
-
-const countdownElement = document.getElementById("countdown");
-
-refreshIntervalid;
-
-function updateCountdown() {
-    const minutes = Math.floor(time/60);//rounds a number down to nearest integer
-    let seconds = time % 60;
-
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    
-    countdownElement.innerHTML = `${minutes}: ${seconds}`;
-    time--;
-
-    if (time < 0) {
-        clearInterval(refreshIntervalid);//stops the setInterval when time = 0:00 to avoid negative time
-    }
-}

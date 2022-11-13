@@ -1,4 +1,4 @@
-/* CSS ***********************************************************************/
+/* Main CSS ***********************************************************************/
 
 * {
   box-sizing: border-box;
@@ -201,17 +201,25 @@ textarea {
 } */
 
 .results-WPM {
-  border: 1px solid white;
   position: absolute;
-  top: 30rem;
+  top: 40rem;
+  width: 30%;
+  border: 1px solid yellow;
+  padding: 2rem;
 
-  color: white;
-  margin: 2rem;
+  color: yellow;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5rem;
 }
 
 .countdown {
-  color: white;
-  border: 1px solid white;
   position: absolute;
   top: 40rem;
+
+  color: yellow;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: bold;
+  font-size: 30px;
 }
